@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang = "en-US">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>New Bored Button</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script>
+
+        <style>
+
+            body {
+                background-color: #e9ecef;
+            }       
+
+            .iButton {
+                background-color:rgb(223, 197, 50);
+                padding: 15px 32px;
+                margin: 20px;
+                text-align: center;
+                border: 3px solid black;
+                border-radius: 5px;
+                font-size: 20px;
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            }
+
+            .aButton {
+                background-color:rgb(33, 185, 231);
+                padding: 15px 32px;
+                margin: 20px;
+                text-align: center;
+                border: 3px solid black;
+                border-radius: 5px;
+                font-size: 20px;
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            }
+
+            .eButton {
+                background-color:rgb(182, 17, 182);
+                padding: 15px 32px;
+                margin: 20px;
+                text-align: center;
+                border: 3px solid black;
+                border-radius: 5px;
+                font-size: 20px;
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            }
+
+            .answer {
+                cursor: pointer;
+            }
+
+            .question {
+                cursor: default;
+            }
+
+        </style>
+
+        <script>
+
+            function construction() {
+                alert("Sorry, this button is under construction.");
+            }
+
+            function mainToggle() {
+
+                let a = document.getElementById("Isaac Question 2");
+                a.style.display = "none";
+
+                let b = document.getElementById("Isaac Question 3");
+                b.style.display = "none";
+
+                let c = document.getElementById("Isaac Question 4");
+                c.style.display = "none";
+
+                let d = document.getElementById("Isaac Question 5");
+                d.style.display = "none";
+
+                let e = document.getElementById("Reloading");
+                e.style.display = "none";
+
+            }
+
+            function hideI1() {
+                let x = document.getElementById("question 1");
+                x.remove();
+            }   
+
+            function hideI2() {
+                let x = document.getElementById("Isaac Question 2");
+                x.remove();
+            }
+
+            function hideI3() {
+                let x = document.getElementById("Isaac Question 3");
+                x.remove();
+            }
+
+            function hideI4() {
+                let x = document.getElementById("Isaac Question 4");
+                x.remove();
+            }
+
+            function hideI5() {
+                let x = document.getElementById("Isaac Question 5");
+                x.remove();
+            }
+
+            function unhideI2() {
+                let x = document.getElementById("Isaac Question 2");
+                x.style.display = "block";
+            }
+
+            function unhideI3() {
+                let x = document.getElementById("Isaac Question 3");
+                x.style.display = "block";
+            }
+
+            function unhideI4() {
+                let x = document.getElementById("Isaac Question 4");
+                x.style.display = "block";
+            }
+
+            function unhideI5() {
+                let x = document.getElementById("Isaac Question 5");
+                x.style.display = "block";
+            }
+
+            function restart() {
+                document.location.href = "";
+            }
+
+            let person;
+            let questionNumber = 1;
+            let gamepass;
+            let screenTime;
+            let wifi; 
+
+            let screenTimeThings = ["Play Skyrim", "Play Minecraft", "Watch Youtube", "Work on your Youtube channel", "Beat Halo 3 on legandary difficulty", "Start or continue editing a video", "Practice Blender", "Play Red Alert 3", "Play Kane's Wrath", "Learn more C#", "Play Stronghold Crusader", "Play Stronghold Warlords", "Get the Rasberri Pi to work"];
+
+            let GPGSTT = ["Play Skyrim", "Play Minecraft", "Watch Youtube", "Work on your Youtube channel", "Play Minecraft Dungeons", "Play Rocket League", "Start or continue editing a video"];
+
+            let noScreenTime = ["Learn (or do) more JavaScript", "Clean or organize your room", "Learn more Dragon Tongue", "Start or continue editing a video", "Learn more C#"];
+
+            let noWifi = ["Play Skyrim", "Play Minecraft", "Start or continue editing a video", "Play Red Alert 3", "Play Kane's Wrath"];
+
+            let NWNST = ["Clean or organize your room", "Learn more Dragon Tongue", "Start or continue editing a video"];
+
+            let NWYGP = ["Play Minecraft Dungeons", "Play Skyrim", " Play Minecraft", "Start or continue editing a video", "Play Red Alert 3", "Play Kane's Wrath", "Learn more C#"];
+
+            function chooseIsaac() {
+
+                questionNumber++;
+                person = "Isaac";
+                hideI1();
+                unhideI2();
+
+            };
+
+            function IYQ2() {
+                gamepass = true;
+                hideI2();
+                unhideI3();
+            }
+
+            function INQ2() {
+                gamepass = false;
+                hideI2();
+                unhideI3();
+            }
+
+            function IYQ3() {
+                wifi = true;
+                hideI3();
+                unhideI4();
+            }
+
+            function INQ3() {
+                wifi = false;
+                hideI3();
+                unhideI4();
+            }
+
+            function IYQ4() {
+                screenTime = true;
+                hideI4();
+                unhideI5();
+            }
+
+            function INQ4() {
+                screenTime = false;
+                hideI4();
+                unhideI5();
+            }
+
+            function IYQ5() {
+                document.location.href = "";
+                hideI5();
+            }
+
+            function INQ5() {
+                hideI5();
+                answer();
+            }
+
+            function reloading() {
+
+                let x = document.getElementById("Reloading");
+                x.style.display = "block";
+
+                var timeleft = 5;
+                var downloadTimer = setInterval(function(){
+                if (timeleft <= 0){
+                    clearInterval(downloadTimer);
+                    document.location.href = "";
+                } 
+                else {
+                    document.getElementById("Reloading").innerHTML = "Reloading " + timeleft + " seconds";
+                }
+                timeleft -= 1;
+                }, 1000);
+                //setTimeout(restart, 5000);
+
+            }
+
+            function answer() {
+
+                if (person === "Isaac") {
+
+                    if (wifi === true && gamepass === true && screenTime === true) {
+
+                        let number = Math.floor((Math.random() * GPGSTT.length))
+                        let thing = GPGSTT[number];
+                        document.getElementById("answerHere").innerHTML = thing;
+                        reloading();
+
+                        }
+
+                    else if (wifi === true && gamepass === true && screenTime === false) {
+                       
+                        let number = Math.floor((Math.random() * noWifi.length))
+                        let thing = noWifi[number];
+                        document.getElementById("answerHere").innerHTML = thing;
+                        reloading();
+
+                    }
+
+                    else if (wifi === true && gamepass === false && screenTime === true) {
+
+                        let number = Math.floor((Math.random() * screenTimeThings.length))
+                        let thing = screenTimeThings[number];
+                        document.getElementById("answerHere").innerHTML = thing;
+                        reloading();
+
+                    }
+
+                    else if (wifi === true && gamepass === false && screenTime === false) {
+
+                        let number = Math.floor((Math.random() * noScreenTime.length))
+                        let thing = noScreenTime[number];
+                        document.getElementById("answerHere").innerHTML = thing;
+                        reloading();
+
+                    }
+
+                    else if (wifi === false && gamepass === true && screenTime === true) {
+
+                        let number = Math.floor((Math.random() * NWYGP.length))
+                        let thing = NWYGP[number];
+                        document.getElementById("answerHere").innerHTML = thing;
+                        reloading();
+
+                    }
+
+                    else if (wifi === false && gamepass === true && screenTime === false) {
+
+                        let number = Math.floor((Math.random() * NWNST.length))
+                        let thing = NWNST[number];
+                        document.getElementById("answerHere").innerHTML = thing;
+                        reloading();
+
+                    }
+
+                    else if (wifi === false && gamepass === false && screenTime === true) {
+
+                        let number = Math.floor((Math.random() * noWifi.length))
+                        let thing = noWifi[number];
+                        document.getElementById("answerHere").innerHTML = thing;
+                        reloading();
+
+                    }
+
+                    else if (wifi === false && gamepass === false && screenTime === false) {
+
+                        let number = Math.floor((Math.random() * NWNST.length))
+                        let thing = NWNST[number];
+                        document.getElementById("answerHere").innerHTML = thing;
+                        reloading();
+
+                    }
+                    
+                }
+
+                if (person === "Abby") {}
+
+                if (person === "Elise") {}
+
+            }
+
+        </script>
+
+    </head>
+
+    <body onload = mainToggle()>
+
+        <div class = "jumbotron">
+
+            <center>
+
+                <h2 id = "answerHere"></h2>
+
+                <div id = "question 1">
+
+                    <h1>Choose who you are</h1>
+
+                    <br>
+
+                    <table>
+
+                        <tr>
+
+                        <buttton class = "iButton answer" onclick = "chooseIsaac()">
+                            Isaac
+                        </button>
+
+                        </tr>
+
+                        <tr>
+
+                            <button class = "aButton" onclick = "construction()">
+                                Abby
+                            </button>
+
+                        </tr>
+
+                        <tr>
+
+                            <button class = "eButton" onclick = "construction()">
+                                Elise
+                            </button>
+
+                        </tr>
+
+                    </table>
+
+                </div>
+                
+                <div id = "Isaac Question 2">
+
+                    <p class = "iButton question">Do you have gamepass?</p>
+
+                    <br>
+
+                    <table>
+
+                        <tr>
+                            <button class = "iButton answer" onclick = "IYQ2()">
+                                Yes
+                            </button>
+                        </tr>
+
+                        <tr>
+                            <button class = "iButton answer" onclick = "INQ2()">
+                                No
+                            </button>
+                        </tr>
+
+                    </table>
+
+                </div>
+
+                <div id = "Isaac Question 3">
+
+                    <p class = "iButton question">May you have screen time?</p>
+
+                    <br>
+
+                    <table>
+
+                        <tr>
+                            <button class = "iButton answer" onclick = "IYQ3()">
+                                Yes
+                            </button>
+                        </tr>
+
+                        <tr>
+                            <button class = "iButton answer" onclick = "INQ3()">
+                                No
+                            </button>
+                        </tr>
+
+                    </table>
+
+                </div>
+
+                <div id = "Isaac Question 4">
+
+                    <p class = "iButton question">Is the wifi on?</p>
+
+                    <br>
+
+                    <table>
+
+                        <tr>
+                            <button class = "iButton answer" onclick = "IYQ4()">
+                                Yes
+                            </button>
+                        </tr>
+
+                        <tr>
+                            <button class = "iButton answer" onclick = "INQ4()">
+                                No
+                            </button>
+                        </tr>
+
+                    </table>
+
+                </div>
+
+                <div id = "Isaac Question 5">
+
+                    <p class = "iButton question">Did you have any misclicks?</p>
+
+                    <br>
+
+                    <table>
+
+                        <tr>
+                            <button class = "iButton answer" onclick = "IYQ5()">
+                                Yes
+                            </button>
+                        </tr>
+
+                        <tr>
+                            <button class = "iButton answer" onclick = "INQ5()">
+                                No
+                            </button>
+                        </tr>
+
+                    </table>
+
+                </div>
+
+                <h6 id = "Reloading"></h6>
+
+            </center>
+
+        </div>
+        
+    </body>
+
+</html>
